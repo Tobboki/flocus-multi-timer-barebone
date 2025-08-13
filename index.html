@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f172a">
+    <title>Flocus Multi-Timer</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-title">Flocus Multi-Timer</h1>
+      <button id="settingsToggle" class="icon-btn" aria-label="Open settings" title="Settings">
+        <img src="icons/settings.svg" alt="Settings" width="24" height="24">
+      </button>
+    </header>
+
+    <main class="app-main">
+      <div class="toolbar">
+        <button id="addTimerBtn" class="primary-btn">Add Timer</button>
+      </div>
+      <section id="timersGrid" class="timers-grid" aria-live="polite"></section>
+    </main>
+
+    <aside id="settingsPanel" class="settings-panel" aria-hidden="true">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button id="closeSettings" class="icon-btn" aria-label="Close settings" title="Close">
+          ✕
+        </button>
+      </div>
+
+      <section class="settings-section">
+        <h3>Background</h3>
+        <div class="field-row">
+          <label for="backgroundSelect">Default background</label>
+          <select id="backgroundSelect"></select>
+        </div>
+        <div class="field-row">
+          <label for="backgroundUpload">Upload image</label>
+          <input id="backgroundUpload" type="file" accept="image/*">
+        </div>
+        <div class="field-row">
+          <button id="clearBackground" class="secondary-btn">Clear background</button>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h3>Ambient sound</h3>
+        <div class="field-row">
+          <label for="soundSelect">Default sound</label>
+          <select id="soundSelect"></select>
+        </div>
+        <div class="field-row">
+          <label for="soundUpload">Upload audio</label>
+          <input id="soundUpload" type="file" accept="audio/*">
+        </div>
+        <div class="field-row">
+          <label for="volumeSlider">Volume</label>
+          <input id="volumeSlider" type="range" min="0" max="1" step="0.01">
+        </div>
+        <div class="field-row">
+          <button id="ambientToggle" class="secondary-btn">Play Ambient</button>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h3>Appearance</h3>
+        <div class="field-row">
+          <label for="darkModeToggle">Dark mode</label>
+          <input id="darkModeToggle" type="checkbox">
+        </div>
+      </section>
+    </aside>
+
+    <audio id="ambientAudio" loop></audio>
+
+    <script src="js/storage.js"></script>
+    <script src="js/timers.js"></script>
+    <script src="js/backgrounds.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sw-register.js"></script>
+  </body>
+  </html>
+
+
