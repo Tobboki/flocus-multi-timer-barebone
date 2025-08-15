@@ -1,5 +1,9 @@
 ## Flocus Multi-Timer — Details
 
+### Live Demo
+  link for live demo click [here](https://flocusmultitimer.netlify.app/)
+  or copy link: https://flocusmultitimer.netlify.app/
+
 ### Overview
 A lightweight, offline-capable web app to run multiple independent timers with customizable backgrounds and ambient sounds. All preferences persist locally; no backend required.
 
